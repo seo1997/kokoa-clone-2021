@@ -1,20 +1,40 @@
 .nav {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
   background-color: #f9f9fa;
-  padding: 20px 40px;
+  padding: 20px 50px;
+  box-sizing: border-box;
   border-top: 1px solid rgba(121, 121, 121, 0.3);
 }
 
 .nav__list {
   display: flex;
+  justify-content: space-between;
 }
 
-.nav__btn {
+.nav__link {
+  position: relative; /* position:absoulte는 가장 가까운 relative 를 가진 부모 기준으로 움직임 */
+  color: #2e363e;
+}
+
+.status-bar {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+
+.nav_notification {
+  background-color: tomato;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25%;
-  text-align: center;
-}
-.nav__link {
-  color: #2e363e;
+  color: white;
+  font-weight: 10;
+  position: absolute; /* absoulte 뭔지 다시 확인하기 */
+  left: 10px;
+  bottom: 10px;
 }
