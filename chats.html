@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="CSS/styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Friends - Kokoa Clone</title>
+    <title>Chats - Kokoa Clone</title>
   </head>
   <body>
     <div class="status-bar">
@@ -37,58 +37,34 @@
     </div>
 
     <header class="screen-header">
-      <h1 class="screen-header__title">Friends</h1>
+      <h1 class="screen-header__title">Chats</h1>
       <div class="screen-header__icons">
-        <span><i class="fas fa-search" fa-3x></i></span>
+        <span><i class="fas fa-search"></i></span>
+        <span><i class="far fa-comment-dots"></i></span>
         <span><i class="fas fa-music"></i></span>
         <span><i class="fas fa-cog"></i></span>
         <!-- cogs -->
       </div>
     </header>
 
-    <a id="friends-display-link"
-      ><i class="fas fa-info-circle"></i>Friends' Names Display<i
-        class="fas fa-chevron-right"
-      ></i
-    ></a>
-
-    <main class="friends-screen">
+    <main class="main-screen">
       <div class="user-component">
         <div class="user-component__column">
           <img
             src="KakaoTalk_20210428_221301512.jpg"
-            class="user-component__avatar user-component__avatar--xl"
+            class="user-component__avatar"
           />
           <!-- 변형을 통해 크키를 조정할 때 -->
           <div class="user-component__text">
             <h4 class="user-component__title">SeoYeong</h4>
-            <!--<h6 class="user-component__subtitle">this is whatever</h6>-->
+            <h6 class="user-component__subtitle">
+              Please check My Kokoa Account Info
+            </h6>
           </div>
         </div>
-        <div class="user-component__column"></div>
-      </div>
-      <div class="friends-screen__channel">
-        <div class="friends-screen__channel-header">
-          <span>Channel</span>
-          <i class="fas fa-chevron-up fa-xs"></i>
-        </div>
-        <div class="user-component">
-          <div class="user-component__column">
-            <img
-              src="KakaoTalk_20210428_221301512.jpg"
-              class="user-component__avatar user-component__avatar--sm"
-            />
-            <!-- 변형을 통해 크키를 조정할 때 -->
-            <div class="user-component__text">
-              <h4 class="user-component__title user-component__title--not-bold">
-                Channel
-              </h4>
-            </div>
-          </div>
-          <div class="user-component__column">
-            <span>2</span>
-            <i class="fas fa-chevron-right"></i>
-          </div>
+        <div class="user-component__cloumn">
+          <span class="user-component__time">21:22</span>
+          <div class="badge">1</div>
         </div>
       </div>
     </main>
@@ -96,14 +72,14 @@
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__btn">
-          <a class="nav__link" href="friends.html"
-            ><i class="fas fa-user fa-2x"></i
-          ></a>
+          <a class="nav__link" href="friends.html">
+            <i class="far fa-user fa-2x"></i>
+          </a>
         </li>
         <li class="nav__btn">
           <a class="nav__link" href="chats.html">
-            <span class="nav_notification badge">1</span>
-            <i class="far fa-comment fa-2x"></i>
+            <span class="nav_notification">1</span>
+            <i class="fas fa-comment fa-2x"></i>
           </a>
         </li>
         <li class="nav__btn">
