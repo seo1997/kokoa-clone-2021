@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="CSS/styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chats - Kokoa Clone</title>
+    <title>More - Kokoa Clone</title>
   </head>
   <body>
     <div class="status-bar">
@@ -37,34 +37,77 @@
     </div>
 
     <header class="screen-header">
-      <h1 class="screen-header__title">Chats</h1>
+      <h1 class="screen-header__title">Find</h1>
       <div class="screen-header__icons">
         <span><i class="fas fa-search"></i></span>
-        <span><i class="far fa-comment-dots"></i></span>
         <span><i class="fas fa-music"></i></span>
-        <span><i class="fas fa-cog"></i></span>
-        <!-- cogs -->
+        <span
+          ><a href="settings.html"><i class="fas fa-cog"></i></a
+        ></span>
       </div>
     </header>
 
-    <main class="main-screen">
+    <main class="main-screen more-screen">
+      <!-- user-componet와 icon-row를 공용으로 지정했으므로, 이 둘을 건드리지 않고 설정을 추가하기 위해 class를 두 개 사용함 -->
       <div class="user-component">
         <div class="user-component__column">
           <img
             src="KakaoTalk_20210428_221301512.jpg"
-            class="user-component__avatar"
+            class="user-component__avatar user-component__avatar--xl"
           />
           <!-- 변형을 통해 크키를 조정할 때 -->
           <div class="user-component__text">
             <h4 class="user-component__title">SeoYeong</h4>
-            <h6 class="user-component__subtitle">
-              Please check My Kokoa Account Info
-            </h6>
+            <h6 class="user-component__subtitle">+1 787-432-525</h6>
           </div>
         </div>
         <div class="user-component__column">
-          <span class="user-component__time">21:22</span>
-          <div class="badge">1</div>
+          <i class="far fa-comment-alt fa-2x"></i>
+        </div>
+      </div>
+      <div class="icon-row">
+        <div class="icon-row__icon">
+          <i class="far fa-calendar-alt"></i>
+          <span>Calender</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="far fa-hdd"></i>
+          <span>Talk Drive</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="far fa-smile-wink"></i>
+          <span>Emoticons</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="fas fa-paint-roller"></i>
+          <span>Themes</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="fas fa-coins"></i>
+          <span>Account</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="far fa-comments"></i>
+          <span>Openchat</span>
+        </div>
+        <div class="icon-row__icon"></div>
+        <div class="icon-row__icon"></div>
+      </div>
+      <div class="more-suggestions">
+        <h4 class="more-suggestions__title">Suggestions</h4>
+        <div class="more-suggestions__icons">
+          <div class="more-suggestions__icon">
+            <div class="more-suggestions__icon-image">
+              <i class="fas fa-quote-right"></i>
+            </div>
+            <span class="more-suggestions__icon-text">Kokoa Story</span>
+          </div>
+          <div class="more-suggestions__icon">
+            <div class="more-suggestions__icon-image">
+              <i class="fas fa-quote-right"></i>
+            </div>
+            <span class="more-suggestions__icon-text">Kokoa Story2</span>
+          </div>
         </div>
       </div>
     </main>
@@ -79,7 +122,7 @@
         <li class="nav__btn">
           <a class="nav__link" href="chats.html">
             <span class="nav_notification">1</span>
-            <i class="fas fa-comment fa-2x"></i>
+            <i class="far fa-comment fa-2x"></i>
           </a>
         </li>
         <li class="nav__btn">

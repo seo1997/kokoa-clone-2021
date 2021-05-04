@@ -1,0 +1,117 @@
+.screen-header__icons {
+  position: relative;
+}
+
+.cog_reddot {
+  height: 5px;
+  width: 5px;
+  border-radius: 2.5px;
+  background-color: tomato;
+  position: absolute;
+  left: 75px;
+  bottom: 14px;
+}
+
+.recommended-friends {
+  border-top: var(--main-border);
+  border-bottom: var(--main-border);
+  padding: 15px 0px;
+  margin: 15px 0px;
+}
+
+.recommended-friends__title {
+  font-size: 12px;
+  color: var(--gray-color);
+}
+
+.recommended-friends span {
+  display: block;
+  margin: 60px 0px;
+  /* span은 인라인이기 때문에 margin이 적용이 안됨 */
+  text-align: center;
+  font-size: 18px;
+  color: var(--gray-color);
+}
+
+.open-chat__header {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.open-chat__header span {
+  opacity: 0.6;
+}
+
+.open-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.open-post__title {
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.open-post__hashtags {
+  text-transform: uppercase; /* 모든 문자를 대문자로 만드는 것 */
+  opacity: 0.6;
+}
+
+.open-post__members {
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+}
+
+.open-post__members img {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.open-post__member-count {
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+.open-post__members .divider {
+  /* 어딘가에 divider가 또 들어갈 수 있기 때문에 class 두 개 모두 작성 */
+  width: 2px;
+  height: 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0 5px;
+}
+
+.open-post__member-status {
+  color: #ffb0e0;
+}
+
+.open-post__photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+}
+
+.open-post__photo {
+  position: relative;
+}
+
+.open-post__heart-count {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 5px 8px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 5px;
+  bottom: 7px;
+  font-size: 12px;
+}
+
+.open-post__heart-count span {
+  margin-left: 5px;
+}
