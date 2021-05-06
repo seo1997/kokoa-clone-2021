@@ -1,0 +1,166 @@
+#chat-screen {
+  background-color: #abc1d1;
+  height: 11000vh;
+}
+
+#chat-screen .alt-header,
+#chat-screen .status-bar {
+  top: 0; /* 왜 둘다 top을 0으로 설정했는가? */
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #abc1d1;
+}
+
+.main-chat {
+  margin-top: 100px;
+  /* .alt-header과 .status-bar이 고정되어 있기 때문에 main screen이 margin-top을 가져야함 
+  어떤 요소를 고정히면 이것은 이전의 box들과는 다른 layer가 됨 
+  main chat 부분은 고정된 요소들에 의해 덮여 있는데 왜냐면 main chat에 해당하는 box는 다른 layer이기 때문 */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 왜 이렇게 하는 건지 아직도 이해불가ㅜㅠ */
+}
+
+#chat-screen .status-bar {
+  z-index: 2; /* 더 큰 값이 더 앞으로 나오게 됨 */
+}
+
+#chat-screen .alt-header {
+  top: 10px;
+  z-index: 1;
+}
+
+.chat__timestamp {
+  color: white;
+  background-color: #92a4b2;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.message-row {
+  width: 100%; /* 왜 하는 거? */
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 35%;
+  margin-right: 15px;
+}
+
+.message__author {
+  opacity: 0.8;
+  font-size: 15px;
+  margin-bottom: 8px;
+  display: block; /* message__author은 span이기 때문에 block으로 변경해야지 margin-bottom값을 넣을 수 있음 */
+}
+
+.message__info {
+  display: flex;
+  align-items: flex-end; /* 왜 flex-end인지.... flexbox에 대한 이해 더 필요 */
+}
+
+.message__bubble {
+  background-color: white;
+  padding: 8px 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  margin-right: 5px;
+}
+
+.message__time {
+  opacity: 0.8;
+  font-size: 10px;
+}
+
+.message-row--own {
+  justify-content: flex-end; /* message-row에서 이미 flex를 설정으로 걸어줬기 때문 */
+}
+
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 15px;
+  margin-left: 5px;
+  margin-right: 0px;
+}
+
+/* .message-row--own .message__bubble {
+  order: 1;
+}
+
+.message-row--own .message__time {
+  order: 0;
+}
+order을 이용한 방식은 오직 flex-children에만 적용될 수 있음 */
+
+.message-row--own .message__info {
+  flex-direction: row-reverse;
+}
+
+.reply {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.reply .reply__column:first-child {
+  width: 10%;
+}
+
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+.reply input {
+  padding: 10px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 20px;
+}
+
+.reply__column:last-child>i,  /* direct children */
+.reply__column:last-child button {
+  position: absolute;
+  right: 0px;
+  top: 4px; /* absolute로 설정되어 있기 때문에 일일이 만져야 함 */
+  right: -3px;
+}
+
+.reply__column:last-child > i {
+  right: 40px;
+  top: 10px;
+}
+
+.reply i {
+  opacity: 0.5;
+}
+
+.reply__column button {
+  background-color: var(--yellow);
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.reply__column button i {
+  opacity: 1;
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+}
