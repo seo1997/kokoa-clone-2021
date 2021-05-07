@@ -115,3 +115,22 @@
 .open-post__heart-count span {
   margin-left: 5px;
 }
+
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(1.2);
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+.open-post__heart-count:hover i {
+  will-change: transform; /* 어떤 것이 변할 것인지 알려줘서 transform이 안정되게 작동하게 함. 일종의 브라우저를 돕는 행위. 그래픽카드를 이용해서 애니메이션을 가속화 함 */
+  animation: heartBeat 1s linear infinite;
+}

@@ -30,3 +30,28 @@
   justify-content: space-between;
   color: rgba(0, 0, 0, 0.4);
 }
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden; /* 마우스에 걸리지 않게 빠져버리는 것, 하지만 더 제대로 바꾸기 위해서는 JS사용해야 함 */
+  }
+} /* 1에서 0으로 이동 
+opacity가 단순히 변하는 것이기 때문에 element가 사라지는 것이 아님*/
+
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute;
+  height: 100vh; /* 화면 높이의 100% */
+  width: 100vw; /* 화면 넓이의 100% */
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 120px;
+  animation: hideSplashScreen 0.5s ease-in-out forwards; /* forwards-애니메이션의 마지막 값을 기억하는 것(여기서는 'to' frames) */
+  animation-delay: 1s;
+}

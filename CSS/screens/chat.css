@@ -1,6 +1,6 @@
 #chat-screen {
   background-color: #abc1d1;
-  height: 11000vh;
+  height: 100vh;
 }
 
 #chat-screen .alt-header,
@@ -12,6 +12,17 @@
   background-color: #abc1d1;
 }
 
+@keyframes fadeIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
 .main-chat {
   margin-top: 100px;
   /* .alt-header과 .status-bar이 고정되어 있기 때문에 main screen이 margin-top을 가져야함 
@@ -20,6 +31,7 @@
   display: flex;
   flex-direction: column;
   align-items: center; /* 왜 이렇게 하는 건지 아직도 이해불가ㅜㅠ */
+  animation: fadeIn 0.3s linear;
 }
 
 #chat-screen .status-bar {
@@ -114,6 +126,7 @@ order을 이용한 방식은 오직 flex-children에만 적용될 수 있음 */
   padding: 5px 25px;
   box-sizing: border-box;
   align-items: center;
+  transition: transform 0.4s ease-in-out;
 }
 
 .reply .reply__column:first-child {
@@ -130,6 +143,7 @@ order을 이용한 방식은 오직 flex-children에만 적용될 수 있음 */
   width: 100%;
   border: var(--main-border);
   border-radius: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply__column:last-child>i,  /* direct children */
@@ -163,4 +177,27 @@ order을 이용한 방식은 오직 flex-children에만 적용될 수 있음 */
 .reply__column button:focus,
 .reply__column button:active {
   outline: none;
+}
+
+/* reply 내부에 어떤 element가 focus 되어 있다면... .reply___column:first-child, fa-grin, button 모두 사라지게 만듦*/
+/* father knows when children is focused */
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-grin,
+.reply:focus-within button {
+  opacity: 0;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-grin,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.reply input:focus {
+  width: 90vw;
+  transform: translateX(-12%) translateY(-80px);
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
 }
